@@ -19,7 +19,7 @@ class MessageView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        messages = Message.objects.filter(sender_id=request.user.id)
+        messages = Message.objects.filter(sender_id=request.user.id).order_by('id')
         serializer = MessageSerializer(messages, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -57,6 +57,6 @@ class UnReadMessageView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        messages = Message.objects.filter(sender_id=request.user.id, message_read=False)
+        messages = Message.objects.filter(sender_id=request.user.id, message_read=False).order_by('id')
         serializer = MessageSerializer(messages, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
