@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "c2f9dc24-973b-42b6-984f-e2140baefeef",
+		"name": "ChatApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "djangotestchat.herokuapp.com/chat/messages/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token a8cd3f978733336e3d7cd5856d7653166fbe483c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "djangotestchat.herokuapp.com/chat/messages/",
+					"host": [
+						"djangotestchat",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"chat",
+						"messages",
+						""
+					]
+				},
+				"description": "Get all messages for a specific user"
+			},
+			"response": []
+		},
+		{
+			"name": "djangotestchat.herokuapp.com/chat/messages/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token a8cd3f978733336e3d7cd5856d7653166fbe483c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"receiver\": 2,\n\t\"subject\": \"New Subject\",\n\t\"message\": \"New Message\"\n}"
+				},
+				"url": {
+					"raw": "djangotestchat.herokuapp.com/chat/messages/",
+					"host": [
+						"djangotestchat",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"chat",
+						"messages",
+						""
+					]
+				},
+				"description": "Write a new message"
+			},
+			"response": []
+		},
+		{
+			"name": "djangotestchat.herokuapp.com/chat/messages/unread",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token a8cd3f978733336e3d7cd5856d7653166fbe483c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "djangotestchat.herokuapp.com/chat/messages/",
+					"host": [
+						"djangotestchat",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"chat",
+						"messages",
+						""
+					]
+				},
+				"description": "Get all unread messages"
+			},
+			"response": []
+		},
+		{
+			"name": "djangotestchat.herokuapp.com/chat/messages/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token a8cd3f978733336e3d7cd5856d7653166fbe483c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "djangotestchat.herokuapp.com/chat/messages/",
+					"host": [
+						"djangotestchat",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"chat",
+						"messages",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Get specific a message"
+			},
+			"response": []
+		},
+		{
+			"name": "djangotestchat.herokuapp.com/chat/messages/38",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token a8cd3f978733336e3d7cd5856d7653166fbe483c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "djangotestchat.herokuapp.com/chat/messages/38",
+					"host": [
+						"djangotestchat",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"chat",
+						"messages",
+						"38"
+					]
+				},
+				"description": "Delete a specific message"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
